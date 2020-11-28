@@ -1,5 +1,16 @@
-import { Box, ButtonGroup, Flex, Stack, Text } from '@chakra-ui/react'
-import { useMemo, useState } from 'react'
+import {
+  Box,
+  ButtonGroup,
+  Flex,
+  Icon,
+  Link,
+  Stack,
+  StackDivider,
+  Text,
+  useBreakpointValue,
+} from '@chakra-ui/react'
+import React, { useMemo, useState } from 'react'
+import { AiFillGithub, AiFillLinkedin, AiOutlineDownload } from 'react-icons/ai'
 import { ActiveTabRef } from '../../utils/typings'
 import NavButton from '../NavButton'
 
@@ -77,7 +88,9 @@ export default function Navbar() {
         left={[0, null, 'initial']}
         bg="inherit"
         zIndex={1}
-        w={['100%', null, 'auto']}
+        alignItems="center"
+        w="100%"
+        pb={[4, null, 0]}
       >
         <ButtonGroup
           variant="ghost"
@@ -88,6 +101,61 @@ export default function Navbar() {
         >
           {NavButtons}
         </ButtonGroup>
+
+        <Stack
+          alignItems="center"
+          direction="row"
+          spacing={[3, 2, 1]}
+          ml={[null, null, 'auto']}
+          divider={
+            <StackDivider orientation="horizontal" opacity={[null, null, 0]} />
+          }
+        >
+          <Link
+            href="https://github.com/kwehdev"
+            h="100%"
+            display="flex"
+            alignItems="center"
+          >
+            <Icon
+              as={AiFillGithub}
+              boxSize={8}
+              _hover={{
+                opacity: 0.6,
+              }}
+            />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/tom-whiting-bbbb491a0/"
+            h="100%"
+            display="flex"
+            alignItems="center"
+          >
+            <Icon
+              as={AiFillLinkedin}
+              boxSize={8}
+              _hover={{
+                opacity: 0.6,
+              }}
+              color="blue.400"
+            />
+          </Link>
+          <Link
+            href="/assets/Thomas_Whiting-CV.pdf"
+            h="100%"
+            display="flex"
+            alignItems="center"
+          >
+            <Icon
+              as={AiOutlineDownload}
+              boxSize={8}
+              _hover={{
+                opacity: 0.6,
+              }}
+              color="orange.600"
+            />
+          </Link>
+        </Stack>
       </Stack>
     </Flex>
   )
