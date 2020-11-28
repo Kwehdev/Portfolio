@@ -3,11 +3,7 @@ import { ActiveTabRef } from '../../utils/typings'
 
 export const ActiveTabContext = createContext(undefined)
 
-export const ActiveTabProvider = ({
-  children,
-}: {
-  children: JSX.Element[]
-}) => {
+export const ActiveTabProvider = ({ children }: { children: JSX.Element }) => {
   const [activeTab, setActiveTab] = useState('About_Me')
 
   const changeActiveTab = (newTabRef: ActiveTabRef) => setActiveTab(newTabRef)
