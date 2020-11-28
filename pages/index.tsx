@@ -2,6 +2,7 @@ import Head from 'next/head'
 import React, { useMemo } from 'react'
 import AboutMe from '../src/client/components/AboutMe'
 import Contact from '../src/client/components/Contact'
+import Footer from '../src/client/components/Footer'
 import Header from '../src/client/components/Header'
 import Navbar from '../src/client/components/Navbar'
 import Projects from '../src/client/components/Projects'
@@ -36,6 +37,7 @@ export default function Home() {
       <Header />
       <Navbar />
       {ActiveTabComponent}
+      <Footer />
     </>
   )
 }
