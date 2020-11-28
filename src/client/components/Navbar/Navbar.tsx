@@ -1,20 +1,20 @@
 import { Box, ButtonGroup, Flex, Stack, Text } from '@chakra-ui/react'
 import { useMemo, useState } from 'react'
-import { ABOUT_ME, CONTACT, PROJECTS } from '../../utils/constants'
+import { DisplayComponentReference } from '../../utils/typings'
 import NavButton from '../NavButton'
 
 const navButtonData = [
   {
     name: 'About Me',
-    btnRef: ABOUT_ME,
+    btnRef: DisplayComponentReference.ABOUT_ME,
   },
   {
     name: 'Projects',
-    btnRef: PROJECTS,
+    btnRef: DisplayComponentReference.PROJECTS,
   },
   {
     name: 'Contact',
-    btnRef: CONTACT,
+    btnRef: DisplayComponentReference.CONTACT,
   },
 ]
 

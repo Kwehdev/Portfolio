@@ -1,8 +1,9 @@
 import { Button } from '@chakra-ui/react'
+import { DisplayComponentReference } from '../../utils/typings'
 
 type NavButtonProps = {
   name: string
-  btnRef: string
+  btnRef: DisplayComponentReference
 }
 
 export default function NavButton({ name, btnRef }: NavButtonProps) {
