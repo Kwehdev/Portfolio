@@ -1,4 +1,4 @@
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, CSSReset } from '@chakra-ui/react'
 import { AppProps } from 'next/app'
 import theme from '../src/client/utils/theme'
 
