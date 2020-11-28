@@ -1,8 +1,28 @@
 import Head from 'next/head'
+import React, { useMemo } from 'react'
+import AboutMe from '../src/client/components/AboutMe'
+import Contact from '../src/client/components/Contact'
 import Header from '../src/client/components/Header'
 import Navbar from '../src/client/components/Navbar'
+import Projects from '../src/client/components/Projects'
+import useActiveTab from '../src/hooks/useActiveTab'
 
 export default function Home() {
+  const { activeTab } = useActiveTab()
+
+  const ActiveTabComponent = useMemo(() => {
+    switch (activeTab) {
+      case 'About_Me':
+        return <AboutMe />
+      case 'Projects':
+        return <Projects />
+      case 'Contact':
+        return <Contact />
+      default:
+        return <AboutMe />
+    }
+  }, [activeTab])
+
   return (
     <>
       <Head>
@@ -15,6 +35,7 @@ export default function Home() {
       </Head>
       <Header />
       <Navbar />
+      {ActiveTabComponent}
     </>
   )
 }
