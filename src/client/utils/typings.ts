@@ -1,5 +1,1 @@
-export enum DisplayComponentReference {
-  ABOUT_ME,
-  PROJECTS,
-  CONTACT,
-}
+export type ActiveTabRef = 'About_Me' | 'Projects' | 'Contact'

@@ -1,12 +1,12 @@
 import { Button } from '@chakra-ui/react'
-import { DisplayComponentReference } from '../../utils/typings'
+import { ActiveTabRef } from '../../utils/typings'
 
 type NavButtonProps = {
   name: string
-  btnRef: DisplayComponentReference
+  tabRef: ActiveTabRef
 }
 
-export default function NavButton({ name, btnRef }: NavButtonProps) {
+export default function NavButton({ name, tabRef }: NavButtonProps) {
   return (
     <Button
       color="inherit"

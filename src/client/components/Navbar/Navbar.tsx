@@ -1,20 +1,25 @@
 import { Box, ButtonGroup, Flex, Stack, Text } from '@chakra-ui/react'
 import { useMemo, useState } from 'react'
-import { DisplayComponentReference } from '../../utils/typings'
+import { ActiveTabRef } from '../../utils/typings'
 import NavButton from '../NavButton'
 
-const navButtonData = [
+type NavButtonData = {
+  name: string
+  tabRef: ActiveTabRef
+}
+
+const navButtonDataImpl: NavButtonData[] = [
   {
     name: 'About Me',
-    btnRef: DisplayComponentReference.ABOUT_ME,
+    tabRef: 'About_Me',
   },
   {
     name: 'Projects',
-    btnRef: DisplayComponentReference.PROJECTS,
+    tabRef: 'Projects',
   },
   {
     name: 'Contact',
-    btnRef: DisplayComponentReference.CONTACT,
+    tabRef: 'Contact',
   },
 ]
 
@@ -25,7 +30,7 @@ export default function Navbar() {
 
   const NavButtons = useMemo(
     () =>
-      navButtonData.map((buttonData) => (
+      navButtonDataImpl.map((buttonData) => (
         <NavButton key={`NavBtn_${buttonData.name}`} {...buttonData} />
       )),
     []
