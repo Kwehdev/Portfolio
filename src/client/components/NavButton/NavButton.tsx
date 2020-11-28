@@ -16,6 +16,9 @@ export default function NavButton({ name, tabRef }: NavButtonProps) {
       fontWeight="400"
       size="sm"
       opacity={activeTab === tabRef ? 1 : 0.7}
+      _focus={{
+        boxShadow: '0 0 0 3px rgb(220, 220, 220)',
+      }}
       _active={{
         bg: 'atom_dark.700',
       }}
