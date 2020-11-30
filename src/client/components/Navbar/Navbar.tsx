@@ -58,6 +58,8 @@ export default function Navbar() {
       px={4}
       fontSize="1.1em"
       pos={['relative', null, 'initial']}
+      borderBottom="4px solid"
+      borderColor="blue.400"
     >
       <Text
         display="inline-block"
@@ -91,6 +93,8 @@ export default function Navbar() {
         alignItems="center"
         w="100%"
         pb={[4, null, 0]}
+        borderBottom={['4px solid', null, 'none']}
+        borderColor="blue.400"
       >
         <ButtonGroup
           variant="ghost"
