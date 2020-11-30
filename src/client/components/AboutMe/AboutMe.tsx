@@ -3,6 +3,7 @@ import {
   Divider,
   Flex,
   Heading,
+  Icon,
   Image,
   Link,
   List,
@@ -26,15 +27,29 @@ import {
 
 import React from 'react'
 import {
+  AWSIcon,
   ChakraIcon,
   CSS3Icon,
+  DigitalOceanIcon,
+  DockerIcon,
   GatsbyIcon,
+  GHActionsIcon,
+  GraphQLIcon,
+  HerokuIcon,
   HTML5Icon,
+  JavaIcon,
   JavaScriptIcon,
+  JestIcon,
+  MongoDBIcon,
+  NetlifyIcon,
   NextJSIcon,
+  NodeJSIcon,
+  PostgresIcon,
+  PythonIcon,
   ReactIcon,
   ReduxIcon,
   TypeScriptIcon,
+  VercelIcon,
 } from '../TechIcon'
 
 export default function AboutMe() {
@@ -86,7 +101,7 @@ export default function AboutMe() {
         </Flex>
       </Flex>
       <Flex
-        bgColor="white"
+        bgColor="rgb(220, 220, 220)"
         mx="10%"
         color="atom_dark.900"
         py={12}
@@ -96,9 +111,10 @@ export default function AboutMe() {
         <Stack
           direction="row"
           justifyContent="space-between"
-          align="center"
           w="100%"
           px={8}
+          spacing={8}
+          divider={<StackDivider />}
           fontSize="1em"
         >
           <Stack
@@ -110,7 +126,7 @@ export default function AboutMe() {
             divider={<StackDivider />}
           >
             <Heading fontSize="1.5em">Front-End</Heading>
-            <Text>
+            <Text h={['auto', null, '10%']}>
               I prioritize accessible, clean UI. I typically write my own CSS,
               using Chakra-UI for reusability and efficiency.
             </Text>
@@ -137,6 +153,10 @@ export default function AboutMe() {
                 React
               </ListItem>
               <ListItem>
+                <ListIcon as={ReactIcon} />
+                React Native
+              </ListItem>
+              <ListItem>
                 <ListIcon as={ReduxIcon} />
                 Redux
               </ListItem>
@@ -154,12 +174,103 @@ export default function AboutMe() {
               </ListItem>
             </List>
           </Stack>
-
           <Stack
+            align="center"
+            textAlign="center"
             flex="1 0"
             direction="column"
+            spacing={8}
             divider={<StackDivider />}
-          ></Stack>
+          >
+            <Heading fontSize="1.5em">Back-End</Heading>
+            <Text h={['auto', null, '10%']}>
+              I value well-structured, clean, and readable code.
+            </Text>
+            <Heading fontSize="1.4em">Tech Stack</Heading>
+            <List spacing={2} textAlign="initial">
+              <ListItem>
+                <ListIcon as={NodeJSIcon} />
+                Node.js
+              </ListItem>
+              <ListItem>
+                <ListIcon as={JavaIcon} />
+                Java
+              </ListItem>
+              <ListItem>
+                <ListIcon as={PythonIcon} />
+                Python
+              </ListItem>
+              <ListItem>
+                <ListIcon as={TypeScriptIcon} />
+                TypeScript
+              </ListItem>
+              <ListItem>
+                <ListIcon as={Icon} />
+                Rest API
+              </ListItem>
+              <ListItem>
+                <ListIcon as={GraphQLIcon} />
+                GraphQL
+              </ListItem>
+              <ListItem>
+                <ListIcon as={MongoDBIcon} />
+                MongoDB
+              </ListItem>
+              <ListItem>
+                <ListIcon as={PostgresIcon} />
+                PostgreSQL
+              </ListItem>
+            </List>
+          </Stack>
+          <Stack
+            align="center"
+            textAlign="center"
+            flex="1 0"
+            direction="column"
+            spacing={8}
+            divider={<StackDivider />}
+          >
+            <Heading fontSize="1.5em">Dev Ops / Cloud</Heading>
+            <Text h={['auto', null, '10%']}>
+              I typically use AWS/Vercel to deploy apps, and docker for
+              compartmentation.
+            </Text>
+            <Heading fontSize="1.4em">Tech Stack</Heading>
+            <List spacing={2} textAlign="initial">
+              <ListItem>
+                <ListIcon as={AWSIcon} />
+                AWS
+              </ListItem>
+              <ListItem>
+                <ListIcon as={DigitalOceanIcon} />
+                DigitalOcean
+              </ListItem>
+              <ListItem>
+                <ListIcon as={HerokuIcon} />
+                Heroku
+              </ListItem>
+              <ListItem>
+                <ListIcon as={NetlifyIcon} />
+                Netlify
+              </ListItem>
+              <ListItem>
+                <ListIcon as={VercelIcon} />
+                Vercel
+              </ListItem>
+              <ListItem>
+                <ListIcon as={JestIcon} />
+                Jest
+              </ListItem>
+              <ListItem>
+                <ListIcon as={GHActionsIcon} />
+                Github Actions
+              </ListItem>
+              <ListItem>
+                <ListIcon as={DockerIcon} />
+                Docker
+              </ListItem>
+            </List>
+          </Stack>
         </Stack>
       </Flex>
     </Flex>
