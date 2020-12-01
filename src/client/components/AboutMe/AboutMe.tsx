@@ -99,7 +99,7 @@ export default function AboutMe() {
         <Flex
           w={['70%', '60%', '50%', '40%']}
           px={2}
-          boxSize="md"
+          boxSize={['sm', 'md']}
           ml={['initial', null, null, 'auto']}
           mb="auto"
           order={[1, null, null, 2]}
