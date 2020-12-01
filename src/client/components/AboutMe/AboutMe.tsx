@@ -58,14 +58,20 @@ export default function AboutMe() {
       as="main"
       bgColor="atom_dark.700"
       color="white"
-      p={12}
+      p={[2, 4, 8, 12]}
       flexDir="column"
     >
-      <Heading pt={6} pb={8}>
+      <Heading pt={6} pb={4} textAlign={['center', null, null, 'initial']}>
         Hi, I'm Tom
       </Heading>
-      <Flex>
-        <Flex w="60%" px={4} flexDir="column" fontSize={20}>
+      <Flex flexDir={['column', null, null, 'row']} alignItems="center">
+        <Flex
+          w={['90%', '80%', '70%', '60%']}
+          px={4}
+          flexDir="column"
+          fontSize={20}
+          order={[2, null, null, 1]}
+        >
           <Stack spacing={4}>
             <Text>
               I am a British self-taught full-stack Developer, and I have been
@@ -90,7 +96,14 @@ export default function AboutMe() {
             </Text>
           </Stack>
         </Flex>
-        <Flex w="40%" px={2} boxSize="md" ml="auto" mb="auto">
+        <Flex
+          w={['70%', '60%', '50%', '40%']}
+          px={2}
+          boxSize="md"
+          ml={['initial', null, null, 'auto']}
+          mb="auto"
+          order={[1, null, null, 2]}
+        >
           <Box>
             <Image
               borderRadius="full"
@@ -103,18 +116,18 @@ export default function AboutMe() {
       <Flex
         bgColor="rgb(220, 220, 220)"
         mx="10%"
-        color="atom_dark.900"
+        color="atom_dark.700"
         py={12}
         mt={4}
         borderRadius="30px"
       >
         <Stack
-          direction="row"
+          direction={['column', null, null, 'row']}
           justifyContent="space-between"
           w="100%"
           px={8}
           spacing={8}
-          divider={<StackDivider />}
+          divider={<StackDivider borderColor="atom_dark.200" />}
           fontSize="1em"
         >
           <Stack
@@ -123,7 +136,7 @@ export default function AboutMe() {
             flex="1 0"
             direction="column"
             spacing={8}
-            divider={<StackDivider />}
+            divider={<StackDivider borderColor="atom_dark.200" />}
           >
             <Heading fontSize="1.5em">Front-End</Heading>
             <Text h={['auto', null, '10%']}>
@@ -180,7 +193,7 @@ export default function AboutMe() {
             flex="1 0"
             direction="column"
             spacing={8}
-            divider={<StackDivider />}
+            divider={<StackDivider borderColor="atom_dark.200" />}
           >
             <Heading fontSize="1.5em">Back-End</Heading>
             <Text h={['auto', null, '10%']}>
@@ -228,7 +241,7 @@ export default function AboutMe() {
             flex="1 0"
             direction="column"
             spacing={8}
-            divider={<StackDivider />}
+            divider={<StackDivider borderColor="atom_dark.200" />}
           >
             <Heading fontSize="1.5em">Dev Ops / Cloud</Heading>
             <Text h={['auto', null, '10%']}>
