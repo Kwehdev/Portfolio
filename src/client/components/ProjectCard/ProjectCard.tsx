@@ -34,17 +34,19 @@ export default function ProjectCard({
       borderRadius="20px"
       p={[6, 4, 2]}
       flexDir="column"
-      w={['100%', null, '50%', '33%']}
+      mx={[0, null, '2%']}
+      my={'2%'}
+      w={['100%', null, '46%', '29%']}
       alignItems="center"
     >
       <Heading py={4}>{name}</Heading>
       <Box w="90%" py={4}>
-        <Image borderRadius="10px" alt="Portfolio image" src={image} />
+        <Image borderRadius="10px" alt={`${name} image`} src={image} />
       </Box>
       <Text w="80%" py={4}>
         {description}
       </Text>
-      <Stack direction="row" fontSize="1.8em" spacing={4}>
+      <Stack mt="auto" direction="row" fontSize="1.8em" spacing={4}>
         <Link _hover={{ opacity: 0.6 }} href={ghLink} isExternal>
           <Icon as={AiFillGithub} />
         </Link>
