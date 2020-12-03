@@ -28,10 +28,10 @@ const navButtonDataImpl: NavButtonData[] = [
     name: 'Projects',
     tabRef: 'Projects',
   },
-  {
-    name: 'Contact',
-    tabRef: 'Contact',
-  },
+  // {
+  //   name: 'Contact',
+  //   tabRef: 'Contact',
+  // },
 ]
 
 export default function Navbar() {
