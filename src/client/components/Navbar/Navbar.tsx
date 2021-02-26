@@ -53,6 +53,7 @@ export default function Navbar() {
 
   return (
     <Flex
+      id="content"
       as="nav"
       w="100%"
       h="8vh"
