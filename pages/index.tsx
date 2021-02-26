@@ -1,28 +1,28 @@
-import Head from 'next/head'
-import React, { useMemo } from 'react'
-import AboutMe from '../src/client/components/AboutMe'
-import Contact from '../src/client/components/Contact'
-import Footer from '../src/client/components/Footer'
-import Header from '../src/client/components/Header'
-import Navbar from '../src/client/components/Navbar'
-import Projects from '../src/client/components/Projects'
-import useActiveTab from '../src/hooks/useActiveTab'
+import Head from "next/head";
+import React, { useMemo } from "react";
+import AboutMe from "../src/client/components/AboutMe";
+import Contact from "../src/client/components/Contact";
+import Footer from "../src/client/components/Footer";
+import Navbar from "../src/client/components/Navbar";
+import Projects from "../src/client/components/Projects";
+import Splash from "../src/client/components/Splash";
+import useActiveTab from "../src/hooks/useActiveTab";
 
 export default function Home() {
-  const { activeTab } = useActiveTab()
+  const { activeTab } = useActiveTab();
 
   const ActiveTabComponent = useMemo(() => {
     switch (activeTab) {
-      case 'About_Me':
-        return <AboutMe />
-      case 'Projects':
-        return <Projects />
-      case 'Contact':
-        return <Contact />
+      case "About_Me":
+        return <AboutMe />;
+      case "Projects":
+        return <Projects />;
+      case "Contact":
+        return <Contact />;
       default:
-        return <AboutMe />
+        return <AboutMe />;
     }
-  }, [activeTab])
+  }, [activeTab]);
 
   return (
     <>
@@ -34,10 +34,10 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      <Header />
+      <Splash />
       <Navbar />
       {ActiveTabComponent}
       <Footer />
     </>
-  )
+  );
 }
