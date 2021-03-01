@@ -81,11 +81,10 @@ export default function AboutMe() {
               young.
             </Text>
             <Text>
-              Since August 2020, I have been studying with Integrify. I
-              currently serve as one of the Team Leaders for my group, as well
-              as tech lead. I suggest technologies and give demonstrations on
-              their use, and assist with debugging/code structuring and best
-              practices where I can apply them in my peers' code.
+              Since Summer 2020, I have been working with Integrify. I
+              currently serve as one of the Team Leaders, as well
+              as technical lead. I suggest technologies and give demonstrations on
+              their use, and I take pride in producing well-structured, clean code.
             </Text>
             <Text>
               I am most passionate about Open-Source software, and I prioritize
